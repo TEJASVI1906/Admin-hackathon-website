@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Hackathon Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <h1>Hackathon 2025</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#register">Register</a>
+      <a href="#admin">Admin</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Welcome to the Student Hackathon!</h2>
+    <p>Join us for 24 hours of coding, innovation, and fun.</p>
+    <button onclick="scrollToSection('register')">Register Now</button>
+  </section>
+
+  <!-- Registration Form -->
+  <section id="register" class="form-section">
+    <h2>Student Registration</h2>
+    <form id="registrationForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="college" placeholder="College/University" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- Admin Dashboard -->
+  <section id="admin" class="admin-section">
+    <h2>Admin Dashboard</h2>
+    <button onclick="showRegistrations()">View Registered Students</button>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>College</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will load here -->
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
